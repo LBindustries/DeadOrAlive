@@ -1,0 +1,24 @@
+{% extends "stampo.htm" %}
+{% block title %}Dashboard - PingBot{% endblock %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th>Nome del server</th>
+        <th>Indirizzo</th>
+        <th>Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for server in servers %}
+    <tr>
+        <td>{{server[2]}}</td>
+        <td>{{server[4]}}:{{server[5]}}</td>
+        <td><a href="/serverDelete/{{server[3]}}"><i class="fa fa-trash" aria-hidden="true"></i></a> <a
+                href="/serverLog/{{server[3]}}"><i class="fa fa-book" aria-hidden="true"></i>
+        </a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

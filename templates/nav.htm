@@ -1,0 +1,8 @@
+<nav class="navbar navbar-light bg-faded navbar-static-top">
+    <a class="navbar-brand" href="/dashboard">TiPingo Bot</a>
+    {% if utente %}
+        <a class="nav-link">Accesso eseguito come {{ utente.username }} </a>
+        <a href="/" class="btn btn-danger">Logout</a>
+    {% else %}
+    {% endif %}
+</nav>
